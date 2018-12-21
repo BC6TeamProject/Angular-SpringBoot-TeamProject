@@ -1,0 +1,10 @@
+.stockinfo {
+  padding-top: 130px;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.topic {
+  font-weight: bold;
+}

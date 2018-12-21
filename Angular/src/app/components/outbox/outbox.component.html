@@ -1,0 +1,21 @@
+<div class="outbox">
+  <app-navbar></app-navbar>
+  <div class="row d-flex justify-content-center">
+    <div class="card col-6">
+      <br>
+      <h2 class="text-center">Outbox</h2>
+      <br>
+      <hr>
+      <div class="showmsg" *ngFor="let msg of outbox">
+        Sender: {{msg.sender}} <br>
+        Time Sent: {{msg.timeSent}} <br>
+        Message: {{msg.body}}
+        <hr>
+      </div>
+      <div class="button text-center">
+        <button class="btn btn-primary" routerLink="/home">Back</button>
+        <br> <br> <br>
+      </div>
+    </div>
+  </div>
+</div>

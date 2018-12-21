@@ -1,0 +1,82 @@
+<div class="register">
+  <app-navbar></app-navbar>
+  <br>
+  <div class="row d-flex justify-content-center">
+    <div class="card border-secondary col-4"><br> <br>
+      <h2 class="text-center">Register</h2>
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <hr>
+        <br> <br>
+        <div class="col-auto">
+          <label class="sr-only" for="username">username</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faUser"></fa-icon></div>
+            </div>
+            <input formControlName="username" name="username" type="text" class="form-control" id="username" placeholder="username">
+          </div>
+          <div class="alert alert-danger" *ngIf="!addForm.controls['username'].valid && addForm.controls['username'].touched">{{ alert }}</div>
+
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="password">password</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faKey"></fa-icon></div>
+            </div>
+            <input formControlName="password" name="password" type="password" class="form-control" id="password" placeholder="password">
+          </div>
+          <div class="alert alert-danger" *ngIf="!addForm.controls['password'].valid && addForm.controls['password'].touched">{{ alert }}</div>
+
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="firstName">firstName</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faUserTie"></fa-icon></div>
+            </div>
+            <input formControlName="firstName" name="firstName" type="text" class="form-control" id="firstName" placeholder="first name">
+          </div>
+          <div class="alert alert-danger" *ngIf="!addForm.controls['firstName'].valid && addForm.controls['firstName'].touched">{{ alert }}</div>
+
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="lastName">lastName</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faUsers"></fa-icon></div>
+            </div>
+            <input formControlName="lastName" name="lastName" type="text" class="form-control" id="lastName" placeholder="last name">
+          </div>
+          <div class="alert alert-danger" *ngIf="!addForm.controls['lastName'].valid && addForm.controls['lastName'].touched">{{ alert }}</div>
+
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="email">email</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faAt"></fa-icon></div>
+            </div>
+            <input formControlName="email" name="email" type="text" class="form-control" id="email" placeholder="email">
+          </div>
+          <div class="alert alert-danger" *ngIf="!addForm.controls['email'].valid && addForm.controls['email'].touched">{{ alert }}</div>
+
+        </div>
+        <br>
+        <div class="button text-center">
+          <button class="btn btn-success" type="submit" [disabled]="!addForm.valid">Register</button>
+          <button class="btn btn-primary" (click)="goHome()">Back</button>
+          <br> <br> <br>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+

@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <div *ngFor="let stock of stockCompany; let i = index">
+      <div class="stockName">
+        <a class="cardStocks" href="" routerLink="/stockinfo" (click)="getStockInfo(stockSymbol[i], stockPrice[i])">
+          {{stockSymbol[i]}} <br>
+        </a>
+      </div>
+      <div class="stockPrice">
+        {{stock}} <br>
+        {{stockPrice[i]}}
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>

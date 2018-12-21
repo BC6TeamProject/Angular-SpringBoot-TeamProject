@@ -1,0 +1,23 @@
+<div class="stocknews">
+  <div class="row d-flex justify-content-center">
+    <div class="card col-12">
+      <div class="card-body">
+        <h2><a href="" routerLink="/stocknews">Latest News</a></h2>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="card">
+      <div class="card-body">
+        <div *ngFor="let hl of headline; let i = index">
+          <a class="link" href="{{url[i]}}">
+            <h4>{{hl}}</h4>
+          </a>
+          Source: {{source[i]}}
+          <p>{{summary[i]}}</p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

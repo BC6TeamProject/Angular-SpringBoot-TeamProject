@@ -1,0 +1,21 @@
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+.dropdown:hover .dropdown-menu .dropdown-menu-right {
+  display: block;
+  margin-top: 0;
+}
+
+.dropdown-toggle::after {
+  display:none;
+}
+
+.dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
+}
+
+#navbarDropdown3 {
+  color: dimgrey;
+}

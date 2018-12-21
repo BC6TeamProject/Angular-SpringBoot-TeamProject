@@ -1,0 +1,67 @@
+<div class="adminmenu">
+  <app-navbar></app-navbar>
+  <div class="container d-flex justify-content-center">
+    <div class="row">
+      <div class="card card-body">
+        <br>
+        <h2 class="d-flex justify-content-center">Welcome to Admin Menu</h2>
+        <br> <br>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th class="hidden">Id</th>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let user of users">
+            <td class="hidden">{{ user.id }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+            <td *ngIf="user.role == 1">Admin</td>
+            <td *ngIf="user.role == 2">User</td>
+            <th>
+              <button class="btn btn-success" (click)="editUser(user)">Edit</button>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#Modal" (click)="deleteUser(user)">Delete</button></th>
+          </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-primary" (click)="getMessages()">Get All Messages</button>
+        <div *ngIf="showMessages">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>Sender</th>
+              <th>Receiver</th>
+              <th>Body</th>
+              <th>Time Sent</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let message of messages">
+              <td class="hidden">{{ message.id }}</td>
+              <td>{{ message.sender }}</td>
+              <td>{{ message.receiver }}</td>
+              <td>{{ message.body }}</td>
+              <td>{{ message.timeSent }}</td>
+              <th>
+                <!--<button class="btn btn-success" (click)="editUser(user)">Edit</button>-->
+                <button class="btn btn-danger" data-toggle="modal" data-target="#Modal" (click)="deleteMessage(message)">Delete</button></th>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <br> <br>
+</div>

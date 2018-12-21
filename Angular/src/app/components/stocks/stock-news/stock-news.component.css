@@ -1,0 +1,17 @@
+.stocknews {
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+}
+.link {
+  color: black;
+}
+h2 {
+ text-align: center;
+  size: 20px;
+}
+a {
+  color: black;
+}

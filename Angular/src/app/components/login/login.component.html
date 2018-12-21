@@ -1,0 +1,49 @@
+<div class=" login">
+  <app-navbar></app-navbar>
+  <br>
+  <div class="row d-flex justify-content-center">
+    <div class="card border-secondary col-4"><br> <br>
+      <h2 class="text-center">Login</h2>
+      <form [formGroup]="addForm" (ngSubmit)="login(addForm)">
+        <hr>
+        <br>
+        <div class="alert alert-danger" role="alert" *ngIf="checkLogin">
+          Wrong username or password!
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="username">username</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faUser"></fa-icon></div>
+            </div>
+            <input type="text" formControlName="username" class="form-control" id="username" placeholder="username">
+          </div>
+          <div class="alert alert-danger" *ngIf="!addForm.controls['username'].valid && addForm.controls['username'].touched">{{ alert }}</div>
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="password">password</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faKey"></fa-icon></div>
+            </div>
+            <input type="password" formControlName="password" class="form-control" id="password" placeholder="password">
+          </div>
+          <div class="alert alert-danger" *ngIf="!addForm.controls['password'].valid && addForm.controls['password'].touched">{{ alert }}</div>
+
+        </div>
+        <br> <br>
+        <div class="buttons text-center">
+          <button class="btn btn-success btn-lg" type="submit" [disabled]="!addForm.valid">Log in</button>
+          <!--<button class="btn btn-primary" routerLink="/home">Back</button>-->
+        </div>
+        <br> <br>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+

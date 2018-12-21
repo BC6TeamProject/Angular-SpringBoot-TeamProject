@@ -1,0 +1,40 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white">
+  <a class="navbar-brand" href="#" routerLink="/home"><fa-icon [icon]="faBino"></fa-icon> Stockers</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" routerLink="/home"><fa-icon [icon]="faHome"></fa-icon> Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="" routerLink="/adminmenu" *ngIf="role == 1"><fa-icon [icon]="faTools"></fa-icon> Admin Menu<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <fa-icon [icon]="faMail"></fa-icon> Messages
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="" routerLink="/inbox">Inbox</a>
+          <a class="dropdown-item" href="" routerLink="/outbox">Outbox</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="" routerLink="/sendmsg">Send message</a>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <fa-icon [icon]="faUser"></fa-icon> Welcome {{username}}
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="" routerLink="/login" *ngIf="username == null">Login</a>
+        <a class="dropdown-item" href="" routerLink="/register" *ngIf="username == null">Register</a>
+        <a class="dropdown-item" href="#" routerLink="/profile" *ngIf="username != null">View Profile</a>
+        <a class="dropdown-item" href="" *ngIf="username != null" (click)="logout()">Logout</a>
+      </div>
+    </div>
+</nav>

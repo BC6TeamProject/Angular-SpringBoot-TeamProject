@@ -1,0 +1,42 @@
+<div class="adminedit">
+  <app-navbar></app-navbar>
+  <br>
+  <div class="row d-flex justify-content-center">
+    <div class="card border-secondary col-4"><br> <br>
+      <h2 class="text-center">Edit User</h2>
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <br>
+
+        <div class="form-group">
+          <label for="firstName">first name:</label>
+          <input formControlName="firstName" name="firstName" class="form-control" id="firstName"  required>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">last name:</label>
+          <input formControlName="lastName" name="lastName" class="form-control" id="lastName"  required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">email:</label>
+          <input formControlName="email" name="email" class="form-control" id="email"  required>
+        </div>
+
+        <div class="form-group">
+          <label for="role">role:</label>
+          <input formControlName="role" name="role" class="form-control" id="role"  required>
+        </div>
+        <br>
+        <div class="button text-center">
+          <button class="btn btn-success" type="submit">Edit</button>
+          <button class="btn btn-primary" routerLink="/adminmenu">Back</button>
+          <br> <br> <br>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+

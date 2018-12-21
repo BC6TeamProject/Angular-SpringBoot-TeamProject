@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<div class="stockinfo">
+
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="card col-10">
+        <div class="card-body">
+          <h1>
+            {{service.companyNameInfo}}, ({{service.symbolInfo}})
+          </h1>
+          <h1>
+            {{service.price}}
+          </h1>
+          {{service.exchangeInfo}}
+          <hr>
+          <span class="topic">CEO: </span> {{service.ceoInfo}} <br>
+          <span class="topic">website:</span> <a href="{{service.websiteInfo}}"> {{service.websiteInfo}}</a> <br>
+          <span class="topic">description:</span> {{service.descriptionInfo}} <br>
+          <hr>
+          <span class="topic">industry:</span> {{service.industryInfo}} <br>
+          <span class="topic">sector:</span>  {{service.sectorInfo}}
+        </div>
+        <hr>
+        <button class="btn btn-primary" routerLink="/home">Back</button>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+

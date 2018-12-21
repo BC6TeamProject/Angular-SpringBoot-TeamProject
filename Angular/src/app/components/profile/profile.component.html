@@ -1,0 +1,62 @@
+<div class="profile">
+  <app-navbar></app-navbar>
+  <br>
+  <div class="row d-flex justify-content-center">
+    <div class="card border-secondary col-4"><br> <br>
+      <h2 class="text-center">Edit Profile</h2>
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <hr> <br>
+
+        <div class="col-auto">
+          <label class="sr-only" for="password">password</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faKey"></fa-icon></div>
+            </div>
+            <input formControlName="password" name="password" type="password" class="form-control" id="password" placeholder="password">
+          </div>
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="firstName">firstName</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faUserTie"></fa-icon></div>
+            </div>
+            <input formControlName="firstName" name="firstName" type="text" class="form-control" id="firstName" placeholder="first name">
+          </div>
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="lastName">lastName</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faUsers"></fa-icon></div>
+            </div>
+            <input formControlName="lastName" name="lastName" type="text" class="form-control" id="lastName" placeholder="last name">
+          </div>
+        </div>
+        <br>
+        <div class="col-auto">
+          <label class="sr-only" for="email">email</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><fa-icon [icon]="faAt"></fa-icon></div>
+            </div>
+            <input formControlName="email" name="email" type="text" class="form-control" id="email" placeholder="email">
+          </div>
+        </div>
+        <br>
+        <div class="button text-center">
+          <button class="btn btn-success" type="submit">Edit</button>
+          <button class="btn btn-primary" routerLink="/home">Back</button>
+          <br> <br> <br>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br> <br>
+</div>
+
+
+
