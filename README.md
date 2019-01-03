@@ -1,4 +1,4 @@
-# Angular-SpringBoot TeamProject
+# Angular 7 & Spring Boot (Team Project)
 A Team Project for AFDemp Coding Bootcamp 6 with Angular, Spring Boot and mySQL
 
 # Angular
